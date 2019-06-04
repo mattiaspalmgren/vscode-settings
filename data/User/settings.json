@@ -1,0 +1,85 @@
+{
+    // WORKBENCH
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "workbench.editor.enablePreview": false,
+    // EDITOR
+    "editor.fontSize": 11,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "editor.lineHeight": 22,
+    "editor.renderControlCharacters": false,
+    "editor.renderIndentGuides": false,
+    "editor.highlightActiveIndentGuide": false,
+    "editor.matchBrackets": false,
+    "editor.occurrencesHighlight": false,
+    "editor.renderLineHighlight": "none",
+    "editor.selectionHighlight": false,
+    "editor.detectIndentation": false,
+    "editor.parameterHints.cycle": true,
+    "editor.parameterHints.enabled": false,
+    "editor.smoothScrolling": false,
+    "editor.lightbulb.enabled": false,
+    // EXPLORER
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
+    // OTHER
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "css.validate":false,
+    "files.trimTrailingWhitespace": true,
+    "outline.icons": false,
+    "window.zoomLevel": 0,
+    "react-native.packager.port": 19001,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.external.osxExec": "iTerm.app",
+    "telemetry.enableTelemetry": false,
+    // MACROS
+    "macros": {
+      "selectAndCloseExplorer": [
+        "list.select",
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+    "telemetry.enableCrashReporter": false,
+    // VIM
+    "vim.foldfix": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>","w"],
+        "commands": ["workbench.action.files.saveAll"]
+      },
+      {
+        "before": ["<leader>","q"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
+        "before": ["<leader>","tab"],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["<leader>","f"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+      {
+        "before": ["<leader>","a"],
+        "commands": ["workbench.action.showCommands"]
+      },
+      {
+        "before": ["g","t"],
+        "commands": ["editor.action.goToDeclaration"]
+      },
+      {
+        "before": ["g","h"],
+        "commands": ["editor.action.showHover"]
+      }
+    ],
+    // ZEN
+    "zenMode.hideLineNumbers": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": false,
+  }

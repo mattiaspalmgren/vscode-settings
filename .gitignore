@@ -1,0 +1,6 @@
+# Ignore everything
+data/*
+
+# But not these files...
+!data/User/keybindings.json
+!data/User/settings.json

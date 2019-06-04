@@ -1,0 +1,99 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "extension.vim_ctrl+u",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "extension.vim_ctrl+d",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "shift+6",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "shift+f6",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "cmd+7",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "editor.fold",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+[Minus]",
+        "command": "editor.unfold",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+      "key": "shift+cmd+[Minus]",
+      "command": "editor.unfoldAll",
+      "when": "editorFocus"
+    },
+    {
+      "key": "enter",
+      "command": "macros.selectAndCloseExplorer",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder"
+    },
+    {
+      "key": "enter",
+      "command": "list.toggleExpand",
+      "when": "explorerViewletVisible && filesExplorerFocus && explorerResourceIsFolder"
+    },
+    {
+      "key": "escape",
+      "command": "workbench.action.toggleSidebarVisibility",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    // ------ DISABLE ------
+    {
+      "key": "shift+cmd+a",
+      "command": "-workbench.action.showCommands"
+    },
+    {
+      "key": "shift+cmd+0",
+      "command": "-editor.unfold",
+      "when": "editorFocus"
+    },
+    {
+      "key": "cmd+[Minus]",
+      "command": "-editor.unfoldAll",
+      "when": "editorFocus"
+    },
+    {
+      "key": "cmd+k",
+      "command": "-git.commitAll",
+      "when": "!inDebugMode && !terminalFocus"
+    }
+]
