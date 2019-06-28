@@ -21,6 +21,8 @@
     "editor.parameterHints.enabled": false,
     "editor.smoothScrolling": false,
     "editor.lightbulb.enabled": false,
+    "editor.codeLens": true,
+
     // EXPLORER
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -75,6 +77,38 @@
       {
         "before": ["g","h"],
         "commands": ["editor.action.showHover"]
+      },
+      {
+        "before": ["<leader>","1"],
+        "commands": ["editor.foldLevel1"]
+      },
+      {
+        "before": ["<leader>","2"],
+        "commands": ["editor.foldLevel2"]
+      },
+      {
+        "before": ["<leader>","v"],
+        "commands": ["workbench.files.action.showActiveFileInExplorer"]
+      },
+      {
+        "before": ["<leader>","b"],
+        "commands": ["workbench.action.navigateBack"]
+      },
+      {
+        "before": ["g","r"],
+        "commands": ["git.revertSelectedRanges"]
+      },
+      {
+        "before": ["<leader>","t"],
+        "commands": ["extension.jumpToTest"]
+      },
+      {
+        "before": ["<leader>","r"],
+        "commands": ["extension.runJest"]
+      },
+      {
+        "before": ["<leader>","d"],
+        "commands": ["extension.debugJest"]
       }
     ],
     // ZEN
@@ -82,4 +116,25 @@
     "zenMode.fullScreen": false,
     "zenMode.hideStatusBar": false,
     "zenMode.hideTabs": false,
+    "breadcrumbs.enabled": false,
+    // GIT
+    "gitlens.menus": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.views.repositories.enabled": false,
+    "gitlens.views.fileHistory.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.search.enabled": false,
+    "gitlens.views.compare.enabled": false,
+    "gitlens.mode.statusBar.enabled": false,
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    // TEST
+    "jestrunner.configPath": "./packages/svtlib-videoplayer-react/package.json",
   }
