@@ -1,0 +1,113 @@
+{
+	"name": "vscode-jest-runner",
+	"displayName": "Jest Runner",
+	"description": "Simple way to run or debug a single (or multiple) tests from context-menu",
+	"version": "0.3.6",
+	"publisher": "firsttris",
+	"author": "Tristan Teufel",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/firsttris/vscode-jest-runner.git"
+	},
+	"license": "MIT",
+	"icon": "public/icon.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Jest-Runner Config",
+				"properties": {
+					"jestrunner.jestCommand": {
+						"type": "string",
+						"default": "",
+						"description": "Define jest command (optionally)",
+						"scope": "window"
+					},
+					"jestrunner.configPath": {
+						"type": "string",
+						"default": "",
+						"description": "Define jest config path (optionally)",
+						"scope": "window"
+					},
+					"jestrunner.jestPath": {
+						"type": "string",
+						"default": "",
+						"description": "Define jest path (optionally)",
+						"scope": "window"
+					},
+					"jestrunner.runOptions": {
+						"type": "object",
+						"default": {},
+						"description": "Add or overwrite VScode run options (optionally)",
+						"scope": "window"
+					}
+				}
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.runJest",
+				"title": "Run Jest"
+			},
+			{
+				"command": "extension.runPrevJest",
+				"title": "Run Previous Jest"
+			},
+			{
+				"command": "extension.runJestFile",
+				"title": "Run Jest File"
+			},
+			{
+				"command": "extension.debugJest",
+				"title": "Debug Jest"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.runJest",
+					"group": "navigation"
+				},
+				{
+					"command": "extension.runJestFile",
+					"group": "navigation"
+				},
+				{
+					"command": "extension.debugJest",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"publish": "vsce publish patch"
+	},
+	"devDependencies": {
+		"@types/node": "^12.0.10",
+		"prettier": "^1.18.2",
+		"tslint": "^5.18.0",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-plugin-prettier": "^2.0.1",
+		"typescript": "^3.5.2",
+		"vscode": "^1.1.34"
+	},
+	"__metadata": {
+		"id": "13cd6cd6-3da6-4eb8-8d81-b47e6e710e59",
+		"publisherId": "d3042740-ad00-46f8-87c9-ee28ad76da0e",
+		"publisherDisplayName": "firsttris"
+	}
+}

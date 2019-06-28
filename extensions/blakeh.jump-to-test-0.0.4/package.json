@@ -1,0 +1,57 @@
+{
+	"name": "jump-to-test",
+	"displayName": "Jump to Test",
+	"description": "Open spec/test file based on current file's name",
+	"version": "0.0.4",
+	"publisher": "blakeh",
+	"engines": {
+		"vscode": "^1.21.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.jumpToTest"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.jumpToTest",
+				"title": "Jump to Test"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.jumpToTest",
+				"key": "ctrl+alt+t",
+				"mac": "ctrl+alt+t",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"lint": "tslint --project '.'"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"tslint": "^5.8.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/blakeherrington/vscode-jump-to-test"
+	},
+	"__metadata": {
+		"id": "91f07f49-95e9-4f57-8f8b-1f88d634c1a2",
+		"publisherId": "84915302-13f8-416e-bb2b-c1d81218fa4b",
+		"publisherDisplayName": "Blake Herrington"
+	}
+}
