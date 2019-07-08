@@ -4,6 +4,7 @@
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "workbench.editor.enablePreview": false,
+    "workbench.tree.renderIndentGuides": "none",
     // EDITOR
     "editor.fontSize": 11,
     "editor.tabSize": 2,
