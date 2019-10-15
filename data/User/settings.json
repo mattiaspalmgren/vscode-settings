@@ -51,6 +51,7 @@
     // VIM
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
+    "vim.sneak": true,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
       {
@@ -120,6 +121,14 @@
       {
         "before": ["<leader>", "g"],
         "commands": ["bookmarks.list"]
+      },
+      {
+        "before": ["<leader>", "n"],
+        "commands": ["workbench.action.editor.nextChange"]
+      },
+      {
+        "before": ["<leader>", "p"],
+        "commands": ["workbench.action.editor.previousChange"]
       }
     ],
     // ZEN
