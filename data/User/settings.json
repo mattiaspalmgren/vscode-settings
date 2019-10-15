@@ -23,7 +23,9 @@
     "editor.smoothScrolling": false,
     "editor.lightbulb.enabled": false,
     "editor.codeLens": true,
-
+    "editor.foldingStrategy": "indentation",
+    "editor.gotoLocation.multiple": "goto",
+    "editor.stablePeek": false,
     // EXPLORER
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
