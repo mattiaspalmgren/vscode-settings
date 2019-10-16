@@ -156,5 +156,12 @@
     "gitlens.views.compare.location": "scm",
     "gitlens.views.search.location": "scm",
     // TEST
-    "jestrunner.configPath": "./packages/svtlib-videoplayer-react/package.json",
+    // "jestrunner.configPath": "./packages/svtlib-videoplayer-react/package.json",
+    // "jestrunner.configPath": "./packages/svt-videoplayer-examples/package.json",
+    "jestrunner.configPath": "./packages/svtlib-videoplayer-plugin-svt-data/package.json",
+    // SEARCH
+    "search.exclude": {
+      "**/node_modules": true,
+      "_scratch": true
+    }
   }
