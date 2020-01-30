@@ -129,6 +129,10 @@
       {
         "before": ["<leader>", "p"],
         "commands": ["workbench.action.editor.previousChange"]
+      },
+      {
+        "before": ["<leader>", "e"],
+        "commands": ["editor.action.marker.next"]
       }
     ],
     // ZEN
@@ -147,7 +151,7 @@
     "gitlens.views.repositories.enabled": false,
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": false,
-    "gitlens.views.search.enabled": false,
+    "gitlens.views.search.enabled": true,
     "gitlens.views.compare.enabled": true,
     "gitlens.mode.statusBar.enabled": false,
     "gitlens.views.repositories.location": "scm",
