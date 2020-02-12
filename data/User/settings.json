@@ -155,6 +155,16 @@
         "after": ["L", "z", "z"]
       }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<C-u>"],
+        "after": ["H", "z", "z"]
+      },
+      {
+        "before": ["<C-d>"],
+        "after": ["L", "z", "z"]
+      }
+    ],
     "vim.handleKeys": {
       "<C-u>": true,
       "<C-d>": true
