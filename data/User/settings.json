@@ -6,14 +6,14 @@
     "workbench.editor.enablePreview": false,
     "workbench.tree.renderIndentGuides": "none",
     // EDITOR
-    "editor.fontSize": 11,
+    "editor.fontSize": 12,
     "editor.tabSize": 2,
     "editor.minimap.enabled": false,
     "editor.lineHeight": 22,
     "editor.renderControlCharacters": false,
     "editor.renderIndentGuides": false,
     "editor.highlightActiveIndentGuide": false,
-    "editor.matchBrackets": false,
+    "editor.matchBrackets": "never",
     "editor.occurrencesHighlight": false,
     "editor.renderLineHighlight": "none",
     "editor.selectionHighlight": false,
@@ -24,18 +24,25 @@
     "editor.lightbulb.enabled": false,
     "editor.codeLens": true,
     "editor.foldingStrategy": "indentation",
-    "editor.gotoLocation.multiple": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
     "editor.stablePeek": false,
+    "editor.foldingHighlight": false,
+    "html.mirrorCursorOnMatchingTag": false,
     // EXPLORER
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
+    // WINDOW
+    "window.zoomLevel": 0,
     // OTHER
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "css.validate":false,
+    "css.validate": false,
     "files.trimTrailingWhitespace": true,
     "outline.icons": false,
-    "window.zoomLevel": 0,
     "react-native.packager.port": 19001,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "terminal.external.osxExec": "iTerm.app",
@@ -45,14 +52,15 @@
       "selectAndCloseExplorer": [
         "list.select",
         "workbench.action.toggleSidebarVisibility",
-      ]
+      ],
     },
     "telemetry.enableCrashReporter": false,
     // VIM
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
     "vim.sneak": true,
-    "vim.leader": "<space>",
+    "vim.leader": "space",
+    "vim.useCtrlKeys": false,
     "vim.normalModeKeyBindingsNonRecursive": [
       {
         "before": ["<leader>","w"],
@@ -131,10 +139,26 @@
         "commands": ["workbench.action.editor.previousChange"]
       },
       {
+        "before": ["z", "o"],
+        "commands": ["editor.unfoldRecursively"]
+      },
+      {
         "before": ["<leader>", "e"],
         "commands": ["editor.action.marker.next"]
+      },
+      {
+        "before": ["<C-u>"],
+        "after": ["H", "z", "z"]
+      },
+      {
+        "before": ["<C-d>"],
+        "after": ["L", "z", "z"]
       }
     ],
+    "vim.handleKeys": {
+      "<C-u>": true,
+      "<C-d>": true
+    },
     // ZEN
     "zenMode.hideLineNumbers": false,
     "zenMode.fullScreen": false,
@@ -161,11 +185,22 @@
     "gitlens.views.search.location": "scm",
     // TEST
     // "jestrunner.configPath": "./packages/svtlib-videoplayer-react/package.json",
+    "jestrunner.configPath": "./packages/svtlib-videoplayer-api-client/package.json",
     // "jestrunner.configPath": "./packages/svt-videoplayer-examples/package.json",
-    "jestrunner.configPath": "./packages/svtlib-videoplayer-plugin-svt-data/package.json",
+    // "jestrunner.configPath": "./packages/svtlib-videoplayer-device/package.json",
+    // "jestrunner.configPath": "./packages/svtlib-videoplayer-utils/package.json",
+    // "jestrunner.configPath": "./packages/svtlib-videoplayer-statistics/package.json",
+    // "jestrunner.configPath": "./package.json",
     // SEARCH
+    "files.exclude": {
+      "**/node_modules": true,
+      "_scratch": true,
+      "**/dist": true
+    },
     "search.exclude": {
       "**/node_modules": true,
-      "_scratch": true
-    }
+      "_scratch": true,
+      "**/dist": true
+    },
+    "python.dataScience.askForKernelRestart": false
   }
